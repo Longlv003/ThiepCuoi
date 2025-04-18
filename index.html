@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Nguyễn Văn A & <Span>Nguyễn Thị H</Span></h1>
+        </header>
+        <article>
+            <div class="noidung">
+                <div class="name1">
+                    <img src="img/Chure.jpg" alt="img Chú rể">
+                    <h1>Nguyễn Văn A</h1>
+                    <h3>Con ông: Nguyễn văn B</h3>
+                    <h3>Con bà: Nguyễn Thị H</h3>
+                    <p>
+                        Địa chỉ: Xóm 1, Hải Bối - Đông Anh - TP.Hà Nội <br>                        
+                    </p>
+                    <div class="xahoi">
+                        <a href="https://www.facebook.com/thang.le.544916">
+                            <img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" alt="">
+                        </a>                       
+                    </div>
+                </div> 
+                <div class="name1">
+                    <img src="img/Chure.jpg" alt="img Chú rể">
+                    <h1>Nguyễn Văn A</h1>
+                    <h3>Con ông: Nguyễn văn B</h3>
+                    <h3>Con bà: Nguyễn Thị H</h3>
+                    <p>
+                        Địa chỉ: Xóm 1, Hải Bối - Đông Anh - TP.Hà Nội <br>                        
+                    </p>
+                    <div class="xahoi">
+                        <a href="https://www.facebook.com/thang.le.544916">
+                            <img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" alt="">
+                        </a>                       
+                    </div>
+                </div> 
+            </div>
+            <div class="thoigiantiec">
+                <div class="NhaNam">
+                    <h1>LỄ CƯỚI NHÀ NAM</h1>
+                    <div class="time">
+                        <img src="https://img.icons8.com/?size=100&id=RhkKQFp4TrwF&format=png&color=000000" alt="">
+                        <p>16:00, Date: 00/00/2025</p>          
+                    </div>
+                    <div class="address">
+                        <img src="https://img.icons8.com/?size=100&id=53383&format=png&color=000000" alt="">
+                        <p>TẠI GIA NHÀ NAM - Hải Bối, Đông Anh, Hà Nội</p>
+                    </div>                
+                    <div class="map">                   
+                        <a href="https://www.google.com/maps/place//@21.1101641,105.8082632,1692m/
+                        data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDQxNC4xIKXMDSoASAFQAw%3D%3D">
+                        <button type="submit"><img src="https://img.icons8.com/?size=100&id=13794&format=png&color=000000" alt="">
+                            Xem bản đồ</button></a>
+                    </div>  
+                </div>   
+                <div class="NhaNam">
+                    <h1>LỄ CƯỚI NHÀ NAM</h1>
+                    <div class="time">
+                        <img src="https://img.icons8.com/?size=100&id=RhkKQFp4TrwF&format=png&color=000000" alt="">
+                        <p>16:00, Date: 00/00/2025</p>          
+                    </div>
+                    <div class="address">
+                        <img src="https://img.icons8.com/?size=100&id=53383&format=png&color=000000" alt="">
+                        <p>TẠI GIA NHÀ NAM - Hải Bối, Đông Anh, Hà Nội</p>
+                    </div>                
+                    <div class="map">                   
+                        <a href="https://www.google.com/maps/place//@21.109745,105.8084281,1186m/
+                        data=!3m1!1e3!4m6!1m5!3m4!2zMjHCsDA2JzM1LjEiTiAxMDXCsDQ4JzM5LjYiRQ!8m2!3d21.109745!4d105.
+                        811003?entry=ttu&g_ep=EgoyMDI1MDQxNC4xIKXMDSoASAFQAw%3D%3D">
+                        <button type="submit"><img src="https://img.icons8.com/?size=100&id=13794&format=png&color=000000" alt="">
+                            Xem bản đồ</button></a>
+                    </div>  
+                </div>      
+            </div>
+            <div class="thongdiep">
+                <a href=""><button>Gửi lời chúc</button></a>
+                <a href=""><button>Xác nhận tham gia</button></a>
+                <a href="stk.html"><button>Mừng cưới</button></a>
+            </div>
+        </article>
+        <footer>
+            <img src="img/Codau.jpg" alt="">
+            <h1>Thank you!</h1>
+            <h2>Hẹn gặp bạn tại bữa tiệc</h2>
+        </footer>
+    </div>
+
+    <audio id="bgMusic" autoplay loop>
+        <source src="img/Em-Dong-Y-I-Do-Duc-Phuc-911.mp3">
+    </audio>
+      
+      <!-- Nút tắt/mở loa -->
+    <button id="muteButton">🔊</button>
+      
+    <script>
+        const audio = document.getElementById("bgMusic");
+        const muteButton = document.getElementById("muteButton");
+      
+        // Đảm bảo âm thanh phát tự động khi trang được tương tác
+        document.addEventListener("DOMContentLoaded", () => {
+          audio.muted = false;
+          audio.play().catch(() => {
+            // Trình duyệt chặn autoplay -> cần người dùng tương tác
+            muteButton.innerText = "🔇";
+            audio.muted = true;
+          });
+        });
+      
+        // Toggle mute
+        muteButton.addEventListener("click", () => {
+          audio.muted = !audio.muted;
+          muteButton.innerText = audio.muted ? "🔇" : "🔊";
+        });
+    </script>
+</body>
+</html>
